@@ -1,0 +1,1 @@
+django_internet_shop
