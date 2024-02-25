@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контактная информация</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+        }
+        header {
+            background-color: #000080;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #0000CD;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        main {
+            padding: 20px;
+            overflow-x: auto;
+            overflow-y: auto;
+        }
+        footer {
+            background-color: #000080;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: auto;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Контактная информация</h1>
+</header>
+<div align="center">
+    <img src="/static/images/logo_electronics.png" alt="Логотип магазина"/>
+</div>
+<nav>
+    <a href="/">Главная</a>
+    <a href="#">Каталог</a>
+    <a href="#">О нас</a>
+    <a href="/">Контакты</a>
+</nav>
+<div align="right">
+    <a href="#" class="actions">Войти</a>
+    <a href="#" class="actions">Регистрация</a>
+</div>
+<main>
+    <h2>Свяжитесь с нами</h2>
+    <p>Если у вас есть вопросы или предложения, не стесняйтесь обращаться к нам:</p>
+    <ul>
+        <li>Телефон: +7(123)456-78-90;</li>
+        <li>Email: info@example.com;</li>
+        <li>Адрес: г. Неизвестный, ул. Примерная, д. 123. </li>
+    </ul>
+    <h2>Форма обратной связи</h2>
+    <form method="post">
+            {% csrf_token %}
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Сообщение:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+        <button type="submit">Отправить</button>
+    </form>
+</main>
+<footer>
+    <nav>
+        <a href="#">Условия использования</a>
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Карта сайта</a>
+    </nav>
+        &copy; 2024 Интернет-магазин электроники. Все права защищены.
+</footer>
+</body>
+</html>

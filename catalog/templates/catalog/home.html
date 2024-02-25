@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин электроники</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+        }
+        header {
+            background-color: #000080;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #0000CD;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        main {
+            padding: 20px;
+            overflow-x: auto;
+            overflow-y: auto;
+        }
+        footer {
+            background-color: #000080;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: auto;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>Добро пожаловать в интернет-магазин электроники!</h1>
+</header>
+
+<div align="center">
+    <img src="/static/images/logo_electronics.png" alt="Логотип магазина"/>
+</div>
+
+<nav>
+    <a href="/">Главная</a>
+    <a href="#">Каталог</a>
+    <a href="#">О нас</a>
+    <a href="catalog/contacts">Контакты</a>
+</nav>
+
+<div align="right" class="actions">
+    <a href="#" class="actions" >Войти</a>
+    <a href="#" class="actions" >Регистрация</a>
+</div>
+<section class="featured-products">
+    <h2 align="center">Популярные товары</h2>
+    <main class="row">
+        <div class="row text-center">
+            <div class="col-3">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h5 class="my-0 fw-normal">Наушники беспроводные с микрофоном "XYZ Wireless"</h5>
+                    </div>
+                    <img src="/static/images/head_phones.png" alt="Товар 1">
+                    <div class="card-body">
+                        <h2 class="card-title pricing-card-title">Цена: 4.000 ₽</h2>
+                        <p>
+                            Наушники представляют собой идеальное сочетание передовых
+                            технологий и стильного дизайна, обеспечивая вам непревзойденный звук без
+                            проводов.
+                        </p>
+                        <button type="button" class="w-100 btn btn-lg btn-outline-Light btn btn-primary">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h5 class="my-0 fw-normal">Умные часы "Smart Watch 8 Pro Plus"</h5>
+                    </div>
+                    <img src="/static/images/smart_watch.png" alt="Товар 2">
+                    <div class="card-body">
+                        <h2 class="card-title pricing-card-title">Цена: 9.900 ₽</h2>
+                        <p>
+                            Наушники представляют собой идеальное сочетание передовых
+                            технологий и стильного дизайна, обеспечивая вам непревзойденный звук без
+                            проводов.
+                        </p>
+                        <button type="button" class="w-100 btn btn-lg btn-outline-Light btn btn-primary">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h5 class="my-0 fw-normal">Планшет "Mi Tab14 Pro"</h5>
+                    </div>
+                    <img src="/static/images/pad.png" alt="Товар 3">
+                    <div class="card-body">
+                        <h2 class="card-title pricing-card-title">Цена: 26.900 ₽</h2>
+                        <p>
+                            Наслаждайтесь быстрой навигацией нашего планшета, запускайте приложения моментально
+                            и оставайтесь связанными с миром благодаря встроенным возможностям Wi-Fi и Bluetooth.
+                        </p>
+                        <button type="button" class="w-100 btn btn-lg btn-outline-Light btn btn-primary">Добавить в
+                            корзину
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h5 class="my-0 fw-normal">Умные напольные весы "SmartScale X"</h5>
+                    </div>
+                    <img src="/static/images/scales.png" alt="Товар 4">
+                    <div class="card-body">
+                        <h2 class="card-title pricing-card-title">Цена: 1.900 ₽</h2>
+                        <p>
+                            Умные напольные весы - это инновационное решение для тех, кто стремится
+                            к здоровому образу жизни и следит за своими физическими показателями.
+                        </p>
+                        <button type="button" class="w-100 btn btn-lg btn-outline-Light btn btn-primary">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
+<section class="newsletter">
+    <h5 align="center">Подпишитесь на нашу рассылку</h5>
+    <form align="center" action="#">
+        <input type="email" placeholder="Введите ваш email">
+        <button type="submit">Подписаться</button>
+    </form>
+</section>
+<footer>
+    <nav>
+        <a href="#">Условия использования</a>
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Карта сайта</a>
+    </nav>
+        &copy; 2024 Интернет-магазин электроники. Все права защищены.
+</footer>
+</body>
+</html>
