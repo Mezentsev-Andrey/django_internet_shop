@@ -22,12 +22,12 @@ class Command(BaseCommand):
 
             for category in data:
                 if category["model"] == "catalog.category":
-                    category_for_create.append(Category(category_name=category["fields"]['name'],
-                                                        category_description=category["fields"]['description']))
+                    category_for_create.append(Category(name=category["fields"]['name'],
+                                                        description=category["fields"]['description']))
             Category.objects.bulk_create(category_for_create)
             for product in data:
                 if product["model"] == "catalog.product":
-                    product_for_create.append(Product(product_name=product["fields"]['name'],
+                    product_for_create.append(Product(name=product["fields"]['name'],
                                                       description=product["fields"]['description'],
                                                       category=Category.objects.get(pk=product["fields"]['category']),
                                                       price=product["fields"]['price']))
