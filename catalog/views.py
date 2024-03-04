@@ -3,8 +3,10 @@ from django.shortcuts import render
 from catalog.models import Product
 
 
-def index(request):
-    return render(request, 'catalog/index.html')
+def home(request):
+    context_list = {'object_list': Product.objects.all()}
+
+    return render(request, 'catalog/home.html', context=context_list)
 
 
 def contacts(request):
@@ -16,16 +18,7 @@ def contacts(request):
     return render(request, 'catalog/contacts.html')
 
 
-def product_list(request):
-    list_products = Product.objects.all()
-    context_data = {
-        'products': list_products
-    }
-    return render(request, 'catalog/index.html', context=context_data)
-
-
 def product_info(request, pk):
-    context = {
-        'object': Product.objects.get(pk=pk),
-    }
-    return render(request, 'catalog/product_info.html', context=context)
+    category_item = {'object': Product.objects.get(pk=pk)}
+
+    return render(request, 'catalog/product_info.html', context=category_item)

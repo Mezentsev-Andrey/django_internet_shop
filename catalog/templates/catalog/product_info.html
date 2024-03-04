@@ -1,19 +1,24 @@
 {% extends 'catalog/base.html' %}
+<!--{% load mediapath %}-->
+{% block title %} Информация о товаре {% endblock %}
 
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <h2>{{ object.name }}</h2>
-            <p>Категория: {{ object.category.name }}</p>
-            <p>Цена: {{ object.price }}</p>
-            <a href="{% url 'catalog:product_list' %}" class="w-100 btn btn-lg btn-outline-Light btn btn-primary">
-                Назад
-            </a>
+
+<h1 align="center"> {{ object|title }} </h1>
+
+<div class="card px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" style="width: 24rem;">
+    <div class="card-body">
+<!--        <img class="card-img-top" src="{{ object.photo | media_filter }}">-->
+        <h5 class="card-title">{{ object.nomination | upper}}</h5>
+        <p class="card-text">Описание: {{ object.description }}</p>
+        <p class="card-text">Категория: {{ object.category }}</p>
+        <p class="card-text">Дата создания: {{ object.created_at }}</p>
+        <p class="card-text">Дата последнего изменения: {{ object.updated_at }}</p>
+        <div class="d-grid gap-2 mx-auto">
+            <a href="#" class="btn btn-success"> Цена {{object.price | floatformat:'0'}} ₽</a>
+            <a href="{% url 'shop:home' %}" class="w-100 btn btn-lg btn-outline-secondary"> Назад </a>
         </div>
     </div>
 </div>
-
-
 {% endblock %}
