@@ -42,14 +42,16 @@
         <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
-                    <h5 class="my-0 font-weight-normal">Свяжитесь с нами</h5>
+                    <h5 align="center" class="my-0 font-weight-normal">Свяжитесь с нами</h5>
                 </div>
                 <div class="card-body">
-                    <h6>Форма обратной связи</h6>
+                    <h6 align="center">Форма обратной связи</h6>
                     <form method="post">
                         {% csrf_token %}
                         <label for="name">Имя:</label><br>
                         <input type="text" name="name"  class="form-control" id="name" placeholder="Введите ваше имя" required><br>
+                        <label for="email">Контактный телефон:</label><br>
+                        <input type="phone" name="phone" class="form-control" id="phone" placeholder="Введите ваш номер телефона" required><br>
                         <label for="email">Email:</label><br>
                         <input type="email" name="email" class="form-control" id="email" placeholder="Введите ваш email" required><br>
                         <label for="message">Сообщение:</label><br>

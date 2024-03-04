@@ -1,18 +1,18 @@
 {% extends 'catalog/base.html' %}
-<!--{% load mediapath %}-->
+{% load mediapath %}
 {% block title %} Информация о товаре {% endblock %}
 
 {% block content %}
 
 
-<h1 align="center"> {{ object|title }} </h1>
+<h1 align="center"> {{ object.name }} </h1>
 
 <div class="card px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" style="width: 24rem;">
     <div class="card-body">
-<!--        <img class="card-img-top" src="{{ object.photo | media_filter }}">-->
+        <img class="card-img-top" src="{% media_tag object.image %}">
         <h5 class="card-title">{{ object.nomination | upper}}</h5>
         <p class="card-text">Описание: {{ object.description }}</p>
-        <p class="card-text">Категория: {{ object.category }}</p>
+        <p class="card-text">Категория: {{ object.category.name }}</p>
         <p class="card-text">Дата создания: {{ object.created_at }}</p>
         <p class="card-text">Дата последнего изменения: {{ object.updated_at }}</p>
         <div class="d-grid gap-2 mx-auto">
