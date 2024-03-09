@@ -1,10 +1,10 @@
 from django.shortcuts import render
 
-from catalog.models import Product
+from catalog.models import Product, Category
 
 
 def home(request):
-    context_list = {'object_list': Product.objects.all()}
+    context_list = {'object_list': Product.objects.all()[:6]}
 
     return render(request, 'catalog/home.html', context=context_list)
 
@@ -17,6 +17,12 @@ def contacts(request):
         message = request.POST.get('message')
         print(f'You have new message from {name} {phone} ({email}): {message}')
     return render(request, 'catalog/contacts.html')
+
+
+def product_catalog(request):
+    context_list = {'object_list': Product.objects.all()}
+
+    return render(request, 'catalog/product_catalog.html', context=context_list)
 
 
 def product_info(request, pk):

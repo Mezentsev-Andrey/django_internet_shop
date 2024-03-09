@@ -1,12 +1,14 @@
 {% extends 'catalog/base.html' %}
 
-
 {% block title %} Контакты {% endblock %}
 
 {% block content %}
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Контакты</h1>
+    <h4 class="display-4">Интернет-магазин электроники</h4>
+    <p class="lead"> Откройте двери в мир инноваций с нашим интернет-магазином! </p >
+
+    <h2>Контактная информация</h2>
 </div>
 
 <div class="container">
@@ -49,13 +51,13 @@
                     <form method="post">
                         {% csrf_token %}
                         <label for="name">Имя:</label><br>
-                        <input type="text" name="name"  class="form-control" id="name" placeholder="Введите ваше имя" required><br>
+                        <input type="text" name="name"  class="form-control" id="name" placeholder="Введите имя" required><br>
                         <label for="email">Контактный телефон:</label><br>
-                        <input type="phone" name="phone" class="form-control" id="phone" placeholder="Введите ваш номер телефона" required><br>
+                        <input type="phone" name="phone" class="form-control" id="phone" placeholder="Введите номер телефона" required><br>
                         <label for="email">Email:</label><br>
-                        <input type="email" name="email" class="form-control" id="email" placeholder="Введите ваш email" required><br>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Введите email" required><br>
                         <label for="message">Сообщение:</label><br>
-                        <textarea name="message" class="form-control" id="message" rows="4" placeholder="Введите ваше сообщение" required></textarea><br>
+                        <textarea name="message" class="form-control" id="message" rows="4" placeholder="Введите сообщение" required></textarea><br>
                         <button type="submit">Отправить</button>
                     </form>
                 </div>
