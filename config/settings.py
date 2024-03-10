@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django_dump_load_utf8',
     'django_extensions',
 
-    'catalog'
+    'catalog',
+    'blog'
 ]
 
 MIDDLEWARE = [
