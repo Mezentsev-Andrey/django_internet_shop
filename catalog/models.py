@@ -16,7 +16,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=150, verbose_name='Наименование')
+    product_name = models.CharField(max_length=150, verbose_name='Наименование')
     description = models.TextField(verbose_name='Описание', **NULLABLE)
     image = models.ImageField(upload_to='products/', verbose_name='Изображение', **NULLABLE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
@@ -25,7 +25,7 @@ class Product(models.Model):
     updated_at = models.DateField(verbose_name='Дата изменения', **NULLABLE)
 
     def __str__(self):
-        return f'Product({self.name})'
+        return f'Product({self.product_name})'
 
     class Meta:
         verbose_name = 'Продукт'

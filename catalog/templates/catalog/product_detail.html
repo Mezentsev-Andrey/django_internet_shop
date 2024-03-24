@@ -15,9 +15,10 @@
         <p class="card-text">Категория: {{ object.category.name }}</p>
         <p class="card-text">Дата создания: {{ object.created_at }}</p>
         <p class="card-text">Дата последнего изменения: {{ object.updated_at }}</p>
+        <p class="card-text">Активная версия: {{ object.active_version }}</p>
         <div class="d-grid gap-2 mx-auto">
             <a href="#" class="btn btn-success"> Цена: {{object.price | floatformat:'0'}} ₽</a>
-            <a href="{% url 'shop:home' %}" class="w-100 btn btn-lg btn-outline-secondary"> Назад </a>
+            <a href="{% url 'shop:list_products' %}" class="w-100 btn btn-lg btn-outline-secondary"> Назад </a>
         </div>
     </div>
 </div>
